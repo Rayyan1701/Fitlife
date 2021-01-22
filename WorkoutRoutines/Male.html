@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Workout Plan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbarMain">
+        <div class="container-fluid" style="height: 70px; margin-bottom: 10px; ">
+            <a class="navbar-brand" href="../index.html"
+                style="font-weight:normal; font-size:40px; margin-left: 20px;"> FitLife</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent"
+                style="margin-bottom: 0px; font-size: large; ">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Calculations
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="../Calculators/BodyFatCalculator.html">BodyFat
+                                    Percentage</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="../Calculators/CalorieCalculator.html">Calories
+                                    Calculator</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="../Calculators/IdealWeightCalculator.html">Ideal weight
+                                    Calculator</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Workout
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="../WorkoutRoutines/Male.html">Male</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="../WorkoutRoutines/Female.html">Female</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle themeChangeDropdown" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <span id="themeDropDown">Change Theme</span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item lightMode" href="#" onclick="lightMode()">Light Mode</a></li>
+                        <li><a class="dropdown-item darkMode" href="#" onclick="darkMode()">Dark Mode</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav><br>
+
+    <div class="container">
+        <div class="textcontent" style="margin-right: 100px;">
+            <h1 style="text-align: center; margin-bottom: 40px;" class="headBright">The Ultimate Workout Routine for Men</h1>
+
+            <div class="date" style="display: flex; background-color: yellow; color: black">
+                <span style="margin: auto;" id="time"></span>
+            </div>
+            <p style="font-size: large;">
+                If you are at beginner stage and want to gain muscle, one of the best body part splits you can use to
+                accomplish
+                this is the push/pull/legs split routine.
+
+                The push/pull/legs split is one of the simplest, most enduring and popular workout routines. And it’s
+                also extremely effective; assuming that it’s done right.
+            </p>
+            <p><span style="font-size: 18pt;" class="headBright">What Is The Push/Pull/Legs Split Routine?</span></strong></p>
+            <p><span class="maleWOtext">The push/pull/legs split is a very simple training method in
+                    which
+                    you split your body into three parts. And each part is then trained on its own separate day.</span>
+            </p>
+            <p><span class="maleWOtext">In the "push" workout you train all the upper body
+                    pushing muscles, i.e. the chest, shoulders and triceps.</span></p>
+            <p><span class="maleWOtext">In the "pull" workout you train all the upper body
+                    pulling muscles, i.e. the back and biceps.</span></p>
+            <p><span class="maleWOtext">And in the "legs" workout you train the entire
+                    lower
+                    body, i.e. the quads, hamstrings, calves and abdominals.</span></p>
+            <p><span class="maleWOtext">These three workouts are then alternated over
+                    however
+                    many weekly training sessions you choose to do.</span></p>
+            <p><span class="maleWOtext">So for instance if you can only make it to the gym three
+                    days
+                    per week, you would simply do each workout on its own set day once each week, e.g. Monday, Wednesday
+                    and
+                    Friday. However this is not the best way to do it as it means that each body part is only being
+                    trained
+                    once
+                    per week, and as I've said previously this is not optimal for muscle growth (though it's
+                    fine
+                    for a maintenance program).</span></p>
+            <p><span class="maleWOtext">So a better way would be to train four days per week,
+                    alternating
+                    the workouts over your four training sessions. It doesn't matter which days you choose as long as
+                    you
+                    never do more than two days in a row.</span></p>
+            <p><span class="maleWOtext">Another method is the rotating five day cycle, where each
+                    workout
+                    is done over a five day period. So this means you would train 2 on, 1 off, 1 on, 1 off and then
+                    repeat.
+                    This
+                    is probably the best way to do it as it means that each body part is trained once every 5 days -
+                    and
+                    this is about ideal for the more experienced trainee. But it does mean that your training days are
+                    constantly changing so you need a fairly flexible schedule for this to work.</span></p>
+            <p><strong><span style="font-size: 18pt;" class="headBright">Why Use A Push/Pull/Legs Split?</span></strong></p>
+            <p><span class="maleWOtext">The push/pull/legs split is probably the most efficient
+                    workout
+                    split there is because all related muscle groups are trained together in the same workout.</span>
+            </p>
+            <p><span class="maleWOtext">This means that you get the maximum overlap of movements
+                    within
+                    the same workout, and the muscle groups being trained get an overall benefit from this
+                    overlap.</span>
+            </p>
+            <p><span class="maleWOtext">For example when you train chest with say bench press, you are
+                    also hitting your anterior deltoids and triceps hard. And when you train shoulders you are again
+                    involving
+                    your triceps. So it makes sense to work these all together in the same workout for maximum synergy
+                    and
+                    effectiveness.</span></p>
+            <p><span class="maleWOtext">Similarly when you train your back your biceps are heavily
+                    involved, so it again makes sense to train these immediately afterwards so that they can derive the
+                    maximum
+                    benefit from the additional stimulation.</span></p>
+            <p><span class="maleWOtext">It also means you will have minimum overlap of movements
+                    between
+                    workouts, and this will facilitate better recovery than most other body part splits.</span></p>
+            <p><strong><span style="font-size: 18pt;" class="headBright">Who Should Use A Push/Pull/Legs Split?</span></strong></p>
+            <p><span class="maleWOtext">The push/pull/legs split is ideal for both the intermediate
+                    and
+                    advanced trainee.</span></p>
+            <p><span class="maleWOtext">More specifically though, if you are just starting out or have
+                    not
+                    had much in the way of results from your efforts so far, you'll almost certainly do best with a
+                    full
+                    body workout routine, training three days per week. Stick with this for at least six months - more
+                    if
+                    you are still progressing well.</span></p>
+            <p><span class="maleWOtext">Once you hit the intermediate stage however you'll
+                    probably
+                    find you'll do better with an upper/lower split routine training three or four days per week. And
+                    this
+                    is in fact one of the best ways to train for the vast majority of the population.</span></p>
+            <p><span class="maleWOtext">But at any time past the beginner stage you may find the
+                    push/pull/legs split suits you better. Or you may wish to alternate upper/lower splits with a
+                    push/pull/legs
+                    split in order to derive all the benefits that each has to offer.</span></p>
+            <p><span class="maleWOtext">Either way the push/pull/legs split is an extremely effective
+                    method of training that is certain to give you exceptional results if you apply yourself to it
+                    diligently.</span></p>
+
+
+            <p><span class="maleWOtext">The sets listed in
+                    below
+                    routine are your work sets. Always warm up properly first
+                    in order to prepare your body for the heavier work, and to help prevent injury. However another
+                    advantage of
+                    this split routine is that fewer warm-up sets are required as training each exercise/body part warms
+                    you
+                    up
+                    for the next.</span></p>
+
+
+        </div>
+
+        <div class="card col-lg-6 col-md-6 col-sm-12 WOholder">
+            <p style="font-weight: bold; font-size: 50px; margin: auto;" class="headBright">Workout 1</p>
+            <img src="./MaleImages/push.jfif" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h3 class="card-title" class="headBright">Push day muscles</h3>
+                <p class="card-text">In the “push” workout you train all the upper body pushing muscles, i.e. the chest,
+                    shoulders and triceps.</p>
+                <p><span class="maleWOtext">Bench Pres- 3 sets X 5 reps <br /> Seated Dumbbell
+                        Shoulder
+                        Press 3
+                        - sets X 6 reps <br /> Incline Dumbbell Press- 3 sets X 8 reps <br /> Side Lateral Raises- 2
+                        sets X
+                        1 reps<br /> Triceps Pressdowns- 2 sets X 8 reps<br /> Overhead Triceps Extension- 3 sets X 8
+                        reps
+                    </span></p>
+                <hr />
+
+                <p style="font-size: larger; font-weight:normal; margin-bottom: auto;">
+                    To get a better understanding about the push muscle excecises watch these recommended videos! <br />
+                    <iframe class="col-lg-5 col-md-12 col-sm-12" width="500" height="300"
+                        style="margin-right: 20px; margin-top: 30px;" src="https://www.youtube.com/embed/FWDXsqHo14A"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <iframe class="col-lg-5 col-md-12 col-sm-12" width="500" height="300"
+                        style="margin-left: 20px; margin-top: 30px;" src="https://www.youtube.com/embed/-_81CEnNqoI"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </p>
+            </div>
+        </div><br>
+
+        <div class="card col-lg-6 col-md-6 col-sm-12 WOholder">
+            <p style="font-weight: bold; font-size: 50px; margin: auto;" class="headBright">Workout 2</p>
+            <img src="./MaleImages/pull.jfif" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h3 class="card-title" class="headBright">Pull day muscles</h3>
+                <p><span class="maleWOtext">In the "pull" workout you train all the upper
+                        body
+                        pulling muscles, i.e. the back and biceps.</span></p>
+                <p><span class="maleWOtext">Bent-over Row - 3 sets X 5 reps <br /> Pull Ups - 3 sets X
+                        6 reps <br />
+                        Barbell Shrugs - 3 sets X 8 reps <br /> Face Pulls - 2 sets X 1 reps <br /> Barbell Curl - 2
+                        sets X
+                        8 reps <br />
+                        Dumbbell Hammer Curl - 2 sets X 8 reps </span></p>
+                <hr />
+
+
+
+                <p style="font-size: larger; font-weight:normal; margin-bottom: auto;">
+                    To get a better understanding about the Pull muscle excecises watch these recommended videos!<br />
+                    <iframe class="col-lg-5 col-md-12 col-sm-12" width="500" height="300"
+                        src="https://www.youtube.com/embed/tPphF8gepd8" style="margin-right: 20px; margin-top: 30px;"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <iframe class="col-lg-5 col-md-12 col-sm-12" width="500" height="300"
+                        src="https://www.youtube.com/embed/jplqZWgrXRc" style="margin-left: 20px; margin-top: 30px;"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+
+                </p>
+            </div>
+        </div><br>
+
+        <div class="card col-lg-6 col-md-6 col-sm-12 WOholder">
+            <p style="font-weight: bold; font-size: 50px; margin: auto;" class="headBright">Workout 3</p>
+            <img src="./MaleImages/leg.jfif" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h3 class="card-title" class="headBright">Leg day muscles</h3>
+                <p><span class="maleWOtext">And in the "legs" workout you train the entire
+                        lower
+                        body, i.e. the quads, hamstrings, calves and abdominals.</span></p>
+
+                <p><span class="maleWOtext">Squats - 3 sets X 6 reps<br /> Romanian Deadlifts - 2 sets
+                        X 8
+                        reps <br /> Leg Press - 2 sets X 10 reps <br /> Leg Curl - 2 sets X 10 reps <br /> Calf Raise -
+                        4
+                        sets X 8 reps<br /> Hanging Leg Raise - 2 sets X 10 reps </span></p>
+                <hr />
+
+                <p style="font-size: larger; font-weight:normal; margin-bottom: auto;">
+                    To get a better understanding about the leg muscle excecises watch these recommended videos!<br />
+                    <iframe width="500" height="300" class="col-lg-5 col-md-12 col-sm-12"
+                        style="margin-right: 20px; margin-top: 30px;" src="https://www.youtube.com/embed/RjexvOAsVtI"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <iframe width="500" height="300" class="col-lg-5 col-md-12 col-sm-12"
+                        style="margin-left: 20px; margin-top: 30px;" src="https://www.youtube.com/embed/QEtCYoznu-0"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </p>
+            </div>
+        </div><br>
+        <div class="textcontent">
+            <h2 class="headBright"><strong>What is cardio?</strong></h2>
+            <p>The word cardio originated from the Greek word ‘Kardia’ which means heart. Cardio exercise is any
+                exercise or
+                physical activity that increases our heart rate. This form of exercise improves the functioning of our
+                heart, lungs and circulatory system.
+            </p>
+            <p>Most of us understand that to keep our muscles in working order, we need to move them. This movement
+                makes
+                our
+                muscles stronger and, thus, more efficient in keeping us healthy. Since our heart, is also a muscle, it
+                requires
+                a workout so that it gets stronger and the capillaries deliver more oxygen to cells of our muscles. This
+                helps
+                our body to burn more fat during both activity and inactivity.</p>
+            <p> </p>
+            <h3 class="headBright">What are the benefits of cardio?</h3>
+            <p>One of the first steps in building a healthy lifestyle is to include some form of cardio exercise into
+                your
+                routine. It is without a doubt one of the healthiest activities you'll do in a day, almost like
+                brushing
+                your teeth or sleeping 8 hours. Through regular cardio, your heart and lung function better, both during
+                exercise and at rest.</p>
+            <p>Improves heart health – First and foremost benefit of cardio exercises has to be heart
+                health. This form of exercise is usually recommended by doctors to patients with risk of heart illnesses
+                as
+                it
+                makes the heart stronger and improves its efficiency of pumping blood throughout the body. It also
+                improves
+                your
+                resting heart rate, thereby reducing the stress on your most vital muscle.</p>
+            <p>Weight loss – Cardio plays an essential part in burning calories. While crash dieting can
+                help in losing weight faster, but, it is not sustainable in the
+                long run. With regular cardio exercise and clean eating, you will see and feel the difference in your
+                fitness.
+                Including some strength training to this can be even more beneficial.</p>
+            <p>Lowers blood pressure – Cardio exercises may help you manage your blood pressure
+                symptoms. It happens because physical activity helps in lowering the blood pressure thereby reducing
+                high
+                blood
+                pressure.</p>
+            <p>Reduces chronic pain – Chronic pains like back pain may be reduced with the help of low
+                impact cardio exercise. Weight loss can further help in relieving your joint pains, as it relieves the
+                stress on
+                the joints carrying all the extra weight.</p>
+            <p>Improves sleep – Cardio exercise may help you sleep better. During a workout, your body
+                expends a lot of energy and thus,
+                needs rest to recover for the next routine. In simple words, exercising everyday tires you out, so you
+                are
+                able
+                to sleep better.</p>
+            <p>Strengths immune system – Cardio exercises improve certain antibodies in the blood called
+                immunoglobulins which helps in strengthening the immune system. With a healthy immune system, your
+                body’s
+                strength to fight the illnesses will improve.</p>
+            <p> </p>
+
+            <h4 class="headBright"><b>How to choose a cardio exercise?</b></h4>
+            <p>Once you've decided that you want to work out to have a healthy body, the next step is to choose a
+                routine among the many available. A significant factor in choosing an exercise is doing something you
+                enjoy.
+                This will also help you maintain the habit in the long run. If you like the outdoors, you can go for a
+                run
+                or go cycling. And if you prefer staying indoors, you can try at-home exercises or consider joining a
+                gym.
+            </p>
+            <p>What you need to focus on is an exercise that makes your heart beat fast, no matter if it is indoors or
+                outdoors. Some things to keep in mind while choosing a cardio exercise.</p>
+            <p><b>‘Best’ cardio </b>– There is nothing like the 'best' cardio routine. As said
+                above, any exercise that increases your heart beat rate is good for you. There are a lot of exercises
+                that
+                come under the category of cardio but each one is good for a specific reason and you need to look at
+                your
+                own needs and lifestyle to determine what's best for you. If you are someone who enjoys the
+                environment and likes to spend time outdoors, running and cycling can be a good form of cardio. If on
+                the
+                other hand, you are more comfortable indoors in your own privacy, at-home exercises like jogging in
+                place,
+                jumping jacks, skipping will be a great option.</p>
+            <p><b>Quantity over quality</b> – People tend to focus on the number of reps they do of an
+                exercise. But what actually matters is the quality of those reps. For example, if you are targeting your
+                abdomen muscles by doing
+                crunches, you should focus on your form and posture instead of the number of crunches your perform. The
+                better your posture will be the better will be the results. 100 crunches with incorrect form will not
+                give
+                much benefit. Additionally, incorrect form and poor alignment may result in injuries.</p>
+            <p><b>Do what you like</b> – The most important point for adopting any workout routine is that
+                it should not be forced. Rather, it should be something that you enjoy doing. Do not start working out
+                because someone passed a negative comment about your weight. Work out because ‘you’ want to work out.
+                Work
+                out because ‘you’ want to be happy. Having a positive association with exercising is going to help you
+                continue with it for a lifetime. If you do not like going to the gym then try at-home exercises or if
+                you
+                like outdoor environment then go for a run. But always do what makes you happy.</p>
+            <p><b>Be flexible </b>– Don't make a single exercise routine and follow it every day
+                without alterations. For any workout routine to be effective, it is essential to include a variety of
+                exercises. Another way to do this is to target a specific set of muscles every day. If one day you have
+                targeted your leg muscles, the second day target your back muscles. By adding a variety of exercises you
+                maintain interest in the workout and also give enough time for each set of muscles to recuperate. Some
+                days
+                you can even ditch the exercise and maybe dance or play a sport. Be flexible and do whatever you like,
+                the
+                idea is to do a healthy activity that gets your heart pumping.</p>
+            <p> </p>
+            <h5 class="headBright"><b>Few simple cardio exercises</b></h5>
+            <p>Below is a list of the simplest form of cardio exercises that you can do even at your home. These
+                exercises
+                can be modified to increase their intensity. To do that, you can either add weights or increase the
+                speed
+                and reps. But whatever you do, make sure that you are comfortable while doing that and do not lose the
+                correct form.</p>
+            <ul>
+                <li>Jog in place</li>
+                <li>Jumping jacks</li>
+                <li>Skipping</li>
+                <li>High knee march</li>
+                <li>Jump squats</li>
+                <li>Mountain climber</li>
+            </ul>
+        </div>
+    </div><hr/>
+
+    <footer style="height: 30vh; background-color: #f8f9fa; padding: 20px;">
+        <div style="display: flex;"><h6 style="margin: auto;" class="logo">Check out our other links here!</h6></div><br><br>
+        <div class="container" style="display: grid; grid-template-columns: 1fr 1fr 1fr; width: 50%;">
+          <div style="margin: auto;" class="logo">
+            <i class="fab fa-2x fa-bootstrap"></i>
+          </div>
+          <div style="margin: auto;" class="logo">
+            <i class="fab fa-2x fa-github"></i>
+          </div>
+          <div style="margin: auto; " class="logo">
+            <i class="fab fa-2x fa-twitter"></i>
+          </div>
+          <div style="height: 6vh;"></div>
+          <div style="height: 6vh;"></div>
+          <div style="height: 6vh;"></div>
+          <span style="margin: auto; grid-column: 2/3;"><a href="../index.html"
+            style="color: black; text-decoration: none;" class="logo">&copy; FitLife</a></span> 
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/6713bd8137.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="./TcMale.js"></script>
+</body>
+
+</html>

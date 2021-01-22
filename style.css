@@ -1,0 +1,114 @@
+.themeChangeDropdown {
+    color: black;
+}
+
+.lightMode, .darkMode {
+    color: black;
+}
+
+.lightMode {
+    outline: -webkit-focus-ring-color auto 1px;
+}
+
+.lightMode:active, .darkMode:active {
+    background-color: gray;
+}
+
+.maleWOtext {
+    color: #444444; font-size: 12pt;
+}
+
+.WOholder {
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    margin: auto;
+    width: 80%;
+}
+.heading
+{
+    font-size: 30px;
+
+}
+#idealweightresulttable
+{
+    width: 80%;
+}
+
+.res
+{
+    border-left: 3px solid black;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    border-right: 0px;
+    text-align:right;
+}
+.BFformula-table
+{
+    border-right: 5px solid black;
+    border-left: 0px;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    text-align: left;
+}
+
+th
+{
+    border: 3px solid black;
+}
+td
+{
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+.tablebase
+{
+    border-bottom: 3px solid black;
+}
+
+.textPara
+{
+    border: 3px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.formulatext
+{
+    border: 3px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    width: 60%;
+    margin: auto;
+    background-color: floralwhite;
+}
+
+.formulabox
+{
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: rgb(203, 243, 228);
+}
+
+.formulatab {
+    color: black;
+}
+
+/* footer
+{
+    width: 100%;
+    background-color: rgb(255, 246, 204);
+    height: 80px;
+    border: 3px solid grey;
+
+} */
+
+.foo
+{
+    height: 10vh;
+    background-color: #f8f9fa;
+    
+}

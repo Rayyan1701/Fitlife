@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideal Weight Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbarMain">
+        <div class="container-fluid" style="height: 70px; margin-bottom: 10px; ">
+            <a class="navbar-brand" href="../index.html"
+                style="font-weight:normal; font-size:40px; margin-left: 20px;"> FitLife</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent"
+                style="margin-bottom: 0px; font-size: large; ">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Calculations
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./BodyFatCalculator.html">BodyFat Percentage</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="./CalorieCalculator.html">Calories Calculator</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="./IdealWeightCalculator.html">Ideal weight Calculator</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Workout
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="../WorkoutRoutines/Male.html">Male</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="../WorkoutRoutines/Female.html">Female</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle themeChangeDropdown" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <span id="themeDropDown">Change Theme</span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item lightMode" href="#" onclick="lightMode()">Light Mode</a></li>
+                        <li><a class="dropdown-item darkMode" href="#" onclick="darkMode()">Dark Mode</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav><br />
+
+    <div class="container">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+                <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item  active">
+                    <img src="./IdealCalculatorImages/img1.jpg" style="height: 600px; width: 80%;" class="d-block w-100"
+                        alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5> “Don't dig your grave with your own knife and fork.” </h5>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./IdealCalculatorImages/img2.jpg" style="height: 600px; width: 80%;" class="d-block w-100"
+                        alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>“ When you feel like quitting, think about why you started.”</h5>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./IdealCalculatorImages/img3.jpg" style="height: 600px;"
+                        style="height: 800px; width: 80%;" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>“It does not matter how slowly you go, as long as you don't stop”</h5>
+
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+        <hr />
+
+
+
+
+        <div style="display: flex;" id="maintainancecalories">
+            <label id="mainHead"
+                style="background-color:burlywood;  padding: 20px;  font-size:x-large; 
+                font-weight: bold; border: 3px solid black; border-radius: 5px ; text-align: center; margin: auto;">
+                Calculate your Ideal weight here!
+            </label>
+        </div><br>
+        <div id="form-container" style="width: 50%; margin: auto;">
+            <div class="form-group">
+                <label class="bfLabel">Gender: </label> <br />
+                <input type="radio" style="margin-right: 7px;" id="gender" name="gender" value="male" class="rad" />
+                <span style="margin-right: 30px;">Male</span>
+                <input type="radio" style="margin-right: 7px;" id="gender" name="gender" value="female" class="rad" />
+                <span style="margin-right: 30px;">Female</span>
+            </div><br />
+            <div class="form-group">
+                <label for="floatingInput">Enter Height (cm): </label>
+                <input type="number" class="form-control" id="height">
+
+            </div>
+            <br />
+            <div class="form-group">
+                <label for="floatingInput">Enter Age: </label>
+                <input type="number" class="form-control" id="age">
+
+            </div>
+            <br />
+
+
+            <div class="form-group" style="display: flex;">
+                <button type="button" data-bs-toggle="popover" title="Popover title"
+                    data-bs-content="And here's some amazing content. It's very engaging. Right?"
+                    class="btn btn-success" style="margin-left: auto;"
+                    onclick="calculateidealweight();">Calculate</button>
+                <span style="margin: 10px;"></span>
+                <button class="btn btn-danger" style="margin-right: auto;" onclick="resetidealweightValues();">Reset
+                    Values</button>
+            </div>
+        </div>
+        <hr />
+        <h2 class="headBright">Result</h2>
+        <p>
+            The results show a number of daily calorie estimates that can be used as a guideline for how many
+            calories to
+            consume each day to maintain, lose, or gain weight at a chosen rate. </p>
+
+        <table id="idealweightresulttable" style="display: none;  margin: auto;" class="table">
+            <tbody>
+
+                <tr>
+                    <th style="width: 20%; width: auto;">
+                        <h3 class="headBright">Method</h3>
+                    </th>
+                    <th colspan="2" style="width: 30%; text-align: center;">
+                        <h3 class="headBright">Ideal weight</h3>
+                    </th>
+
+                </tr>
+
+                <tr>
+                    <th>
+                        <h4 class="headBright">Robinson</h4>
+                        <h6>(1983)</h6>
+                    </th>
+                    <td class="res" id="Robinson"></td>
+                    <td class="BFformula-table" style="margin-left: 0px;">kgs</td>
+                </tr>
+
+                <tr>
+                    <th>
+                        <h4 class="headBright">Miller</h4>
+                        <h6>(1983)</h6>
+                    </th>
+                    <td class="res" id="Miller"></td>
+                    <td class="BFformula-table" style="margin-left: 0px">kgs</td>
+                </tr>
+
+                <tr>
+                    <th>
+                        <h4 class="headBright">Devine</h4>
+                        <h6>(1974)</h6>
+                    </th>
+                    <td class="res" id="Devine"></td>
+                    <td class="BFformula-table" style="margin-left: 0px">kgs</td>
+                </tr>
+
+                <tr class="tablebase">
+                    <th>
+                        <h4 class="headBright">Hamwi</h4>
+                        <h6>(1964)</h6>
+                    </th>
+                    <td class="res" id="Hamwi"></td>
+                    <td class="BFformula-table" style="margin-left: 0px">kgs</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr />
+        <div>
+            <h3 class="headBright">How Much Should I Weigh?</h3>
+            <div class="textpara">
+                <p>Most everyone has at some point tried to lose weight, or at least known somebody who has. This is
+                    largely due
+                    to the perception of an "ideal" body weight, which is often based on what we see promoted through
+                    various
+                    media such as social media, TV, movies, magazines, etc. Although ideal body weight (IBW) today is
+                    sometimes
+                    based on perceived visual appeal, IBW was actually introduced to estimate dosages for medical use,
+                    and the
+                    formulas that calculate it are not at all related to how a person looks at a given weight. It has
+                    since been
+                    determined that the metabolism of certain drugs is more based on IBW than it is total body weight.
+                    Today,
+                    IBW is also used widely throughout sports, since many sports classify people based on their body
+                    weight.</p>
+                <p>Note that IBW is not a perfect measurement. It does not consider the percentages of body fat and
+                    muscle in a
+                    person's body. This means that it is possible for highly fit, healthy athletes to be considered
+                    overweight
+                    based on their IBW. This is why IBW should be considered with the perspective that it is an
+                    imperfect
+                    measure and not necessarily indicative of health, or a weight that a person should necessarily
+                    strive
+                    toward; it is possible to be over or under your "IBW" and be perfectly healthy.</p>
+                <p>How much a person should weigh is not an exact science. It is highly dependent on each individual.
+                    Thus far,
+                    there is no measure, be it IBW, body mass index (BMI), or any other that can definitively state how
+                    much a
+                    person should weigh to be healthy. They are only references, and it's more important to adhere to
+                    making
+                    healthy life choices such as regular exercise, eating a variety of unprocessed foods, getting enough
+                    sleep,
+                    etc. than it is to chase a specific weight based on a generalized formula.</p>
+                <p>That being said, many factors can affect the ideal weight; the major factors are listed below. Other
+                    factors
+                    include health conditions, fat distribution, progeny, etc.</p>
+            </div>
+
+            <p><b>Age</b></p>
+            <p>In theory, age shouldn't be a large determinant of a IBW past the ages of 14-15 for girls and 16-17 for
+                boys,
+                after which most people stop growing. It is actually expected that human males and females to lose 1.5
+                and 2
+                inches in height respectively by age 70. It is important to remember that as people age, lean muscle
+                mass
+                decreases and it is easier to accumulate excess body fat. This is a natural process, though it is
+                possible
+                to lessen the effects of aging by adopting various habits such as monitoring diet, exercise, stress, and
+                sleep.</p>
+
+            <p><b>Gender</b></p>
+            <p>Generally, females weigh less than males even though they naturally have a higher percentage of body fat.
+                This is because the male body generally has higher muscle mass, and muscle is heavier than fat. Not only
+                that, but women generally have lower bone density. Last but not least, males tend to be taller than
+                females.
+            </p>
+
+            <p><b>Height</b></p>
+            <p>The taller the person, the more muscle mass and body fat they have, which results in more weight. A male
+                at a
+                similar height to a female should weigh about 10-20% heavier.</p>
+
+
+
+
+            <h3 class="headBright">Formulae for Finding the Ideal Weight</h3>
+            <div class="textpara">
+                <p>IBW formulas were developed mainly to facilitate drug dosage calculations. All of the formulas, have
+                    the same
+                    format of a base weight given a height of 5 feet, with a set weight increment added per inch over
+                    the height
+                    of 5 feet. For example, if you are a 5'10" male estimating your ideal weight with the Devine
+                    formula, you
+                    would add (2.3 &#215; 10) kg to 50 kg to get 73 kg, or ~161 lbs.</p>
+                <p>The formulas differ in the values used based on the research of the scientists involved in their
+                    development,
+                    and their findings. The Devine formula is the most widely used formula for the measurement of IBW.
+                </p>
+
+                <div class="textpara" style="width: 90%; margin: auto; margin-bottom: 40px; ">
+                    <p style="font-size: 25px; font-weight: normal; margin-left: 13%;" class="headBright"><b>G. J. Hamwi Formula (1964)</b>
+                    </p>
+                    <table align="center" class="formulatab">
+                        <tr class="formulabox" style="border-radius:5px;">
+                            <td class="BFformula-table" style="text-align: right; padding-right: 20px; border: 0px  ">
+                                Male:</td>
+                            <td class="BFformula-table" style="border: 0px">48.0 kg + 2.7 kg per inch over 5 feet</td>
+                        </tr>
+                        <tr class="formulabox" style="border-radius:5px;">
+                            <td class="BFformula-table" style="text-align: right; padding-right: 20px; border: 0px  ">
+                                Female:</td>
+                            <td class="BFformula-table" style="border: 0px">45.5 kg + 2.2 kg per inch over 5 feet</td>
+                        </tr>
+                    </table>
+                    <p>Invented for medicinal dosage purposes.</p>
+                </div>
+
+                <div class="textpara" style="width: 90%; margin: auto; margin-bottom: 40px; ">
+                    <p style="font-size: 25px; font-weight: 10px; margin-left: 13%;" class="headBright"><b>B. J. Devine Formula (1974)</b>
+                    </p>
+                    <table align="center" class="formulatab">
+                        <tr class="formulabox" style="border-radius:5px;">
+                            <td class="BFformula-table" style="text-align: right; padding-right: 20px; border: 0px  ">
+                                Male:</td>
+                            <td class="BFformula-table" style="border: 0px">50.0 kg + 2.3 kg per inch over 5 feet</td>
+                        </tr>
+                        <tr class="formulabox" style="border-radius:5px;">
+                            <td class="BFformula-table" style="text-align: right; padding-right: 20px; border: 0px  ">
+                                Female:</td>
+                            <td class="BFformula-table" style="border: 0px">45.5 kg + 2.3 kg per inch over 5 feet</td>
+                        </tr>
+                    </table>
+                    <p>Similar to the Hamwi Formula, it was originally intended as a basis for medicinal dosages based
+                        on weight and
+                        height. Over time, the formula became a universal determinant of IBW.</p>
+                </div>
+
+                <div class="textpara" style="width: 90%; margin: auto; margin-bottom: 40px; ">
+                    <p style="font-size: 25px; font-weight: 10px; margin-left: 13%;" class="headBright"><b>J. D. Robinson Formula
+                            (1983)</b></p>
+                    <table align="center" class="formulatab">
+                        <tr class="formulabox" style="border-radius:5px;">
+                            <td class="BFformula-table" style="text-align: right; padding-right: 20px; border: 0px  ">
+                                Male:</td>
+                            <td class="BFformula-table" style="border: 0px">52 kg + 1.9 kg per inch over 5 feet</td>
+                        </tr>
+                        <tr class="formulabox" style="border-radius:5px;">
+                            <td class="BFformula-table" style="text-align: right; padding-right: 20px; border: 0px  ">
+                                Female:</td>
+                            <td class="BFformula-table" style="border: 0px">49 kg + 1.7 kg per inch over 5 feet</td>
+                        </tr>
+                    </table>
+                    <p>Modification of the Devine Formula.</p>
+                </div>
+
+                <div class="textpara" style="width: 90%; margin: auto; margin-bottom: 40px; ">
+                    <p style="font-size: 25px; font-weight: 10px; margin-left: 13%;" class="headBright"><b>D. R. Miller Formula (1983)</b>
+                    </p>
+                    <table align="center" class="formulatab">
+                        <tr class="formulabox" style="border-radius:5px;">
+                            <td class="BFformula-table" style="text-align: right; padding-right: 20px; border: 0px  ">
+                                Male:</td>
+                            <td class="BFformula-table" style="border: 0px">56.2 kg + 1.41 kg per inch over 5 feet</td>
+                        </tr>
+                        <tr class="formulabox" style="border-radius:5px;">
+                            <td class="BFformula-table" style="text-align: right; padding-right: 20px; border: 0px  ">
+                                Female:</td>
+                            <td class="BFformula-table" style="border: 0px">53.1 kg + 1.36 kg per inch over 5 feet</td>
+                        </tr>
+                    </table>
+                    <p>Modification of the Devine Formula.</p>
+                </div>
+            </div>
+
+            <p class="headBright"><b>Healthy BMI Range</b></p>
+            <p>The World Health Organization's (WHO) recommended healthy BMI range is 18.5 - 25 for both male and
+                female.
+                Based on the BMI range, it is possible to find out a healthy weight for any given height.</p>
+            <p>BMI is a commonly used metric for determining IBW. It is widely used in the medical field as a quick
+                indicator of possible health complications. Generally, the higher the BMI, the higher the chance a
+                person
+                will suffer from health problems such as obesity, diabetes, heart disease, and many more. It is an
+                indicator
+                used by doctors to advise their patients of potential health problems, especially if there is a
+                noticeable
+                progressive increase in their BMI, and is currently the official metric for classifying individuals
+                according to different obesity levels.</p>
+
+
+            <h3 class="headBright">Limitations of our IBW calculator</h3>
+            <p>There are limitations to all the formulas and methods. Because the formulas are designed to be as
+                applicable
+                to as wide a range of people as possible, they cannot be highly accurate for every single individual.
+                The
+                formulas factor only height and gender, and there are no considerations for physical handicaps, people
+                on
+                the extreme ends of the spectrum, activity levels, or muscle mass to body fat ratios, otherwise known as
+                body composition. Our Ideal Weight Calculator is meant to be used as a general guideline based on
+                popular
+                formulas, and its results are not intended as strict values that a person must achieve to be considered
+                an
+                "ideal weight."</p>
+        </div>
+    </div><hr/>
+
+    <footer style="height: 30vh; background-color: #f8f9fa; padding: 20px;">
+        <div style="display: flex;"><h6 style="margin: auto;" class="logo">Check out our other links here!</h6></div><br><br>
+        <div class="container" style="display: grid; grid-template-columns: 1fr 1fr 1fr; width: 50%;">
+          <div style="margin: auto;" class="logo">
+            <i class="fab fa-2x fa-bootstrap"></i>
+          </div>
+          <div style="margin: auto;" class="logo"> 
+            <i class="fab fa-2x fa-github"></i>
+          </div>
+          <div style="margin: auto; " class="logo">
+            <i class="fab fa-2x fa-twitter"></i>
+          </div>
+          <div style="height: 6vh;"></div>
+          <div style="height: 6vh;"></div>
+          <div style="height: 6vh;"></div>
+          <span style="margin: auto; grid-column: 2/3;"><a href="../index.html"
+            style="color: black; text-decoration: none;" class="logo">&copy; FitLife</a></span> 
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/6713bd8137.js" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="./IdealWeightCalculator.js"></script>
+    <script src="./themes/TcIwc.js"></script>
+</body>
+
+</html>
