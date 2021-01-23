@@ -1,4 +1,4 @@
- <?php
+<?php
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -11,12 +11,13 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = " SELECT * FROM `exercises` where name = 'likith' ";
+
+$sql = " SELECT * FROM `newexercises` where name = 'likith' ";
 $result = mysqli_query($conn, $sql);
 $num = mysqli_num_rows($result);
 
 $conn->close();
-?> 
+?>
 
 <!DOCTYPE html>
 <html lang='en'>
@@ -86,26 +87,26 @@ $conn->close();
       </div>
     </div>
   </nav><br />
-
+  
      <?php
     while($row = mysqli_fetch_array($result))
     {
     echo "
-    <div class='container'>
-    <div class='card' style='width: 18rem;'>
+    <div class='container' style='display: flex;'>
+      <div class='card' id='infoHolder' style='width: 18rem; margin: auto;'>
         <div class='card-body'>
-          <h5 class='card-title'>".$row["name"]."</h5>
-          <h6 class='card-subtitle mb-2 text-muted'>".$row["workout"]."</h6>
-          <p class='card-text'>".$row["date"]."</p>
-          <p class='card-text'>".$row["time"]."</a>
-          <p class='card-text'>".$row["duration"]."</a>
+          <h3 class='card-text'>".$row["date"]."</h3><hr/>
+          <h4 class='card-title'>".$row["workout"]."</h4>
+          <h6 class='card-subtitle mb-2 text-muted'>Calories burnt: ".$row["calories"]."</h6>
+          <h5 class='card-text'>".$row["time"]."</h5>
+          <h5 class='card-text'>".$row["duration"]."</h5>
         </div>
       </div>
-    </div>
+    </div><hr/>
     ";
     }
     ?> 
-    <hr>
+    
     
     <footer style="height: 30vh; background-color: #f8f9fa; padding: 20px;">
       <div style="display: flex;"><h6 style="margin: auto;" class="logo">Check out our other links here!</h6></div><br><br>
