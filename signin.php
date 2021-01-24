@@ -155,6 +155,7 @@ if(isset($_POST['fname']))
       }
       $con->close();
 }
+
 ?>
     <h1 style="text-align:center;"><br> Create your account to get started!</h1><br>
    
