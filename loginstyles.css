@@ -1,0 +1,33 @@
+.loginbox
+{
+    width: 30%;
+    margin: auto;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.submit
+{
+    text-align: center;
+    width: 100%;
+    margin-top: 18px;
+}
+.row
+{
+    margin: 10px;
+}
+
+th
+{
+    width: 40%;
+}
+
+body{
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-image: url('gymBackground.jpg');
+}

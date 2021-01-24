@@ -7,7 +7,7 @@ const lightModeLink = document.getElementsByClassName('lightMode')[0]
 const darkModeLink = document.getElementsByClassName('darkMode')[0]
 const footer = document.getElementsByTagName('footer')[0]
 const logo = document.getElementsByClassName('logo')
-const card = document.getElementById('infoHolder')
+const card = document.getElementsByClassName('infoHolder')
 const ftop = document.getElementById('fTop')
 
 const tables = document.getElementsByTagName('table')
@@ -33,9 +33,12 @@ function lightMode()
         logo[i].style.color = 'black'
     }
 
-    card.style.color = "black"
-    card.style.backgroundColor = "white"
-
+    for(var i = 0; i < card.length; i ++)
+    {
+        card[i].style.color = "black"
+        card[i].style.backgroundColor = "white"
+    }
+    
     ftop.style.borderTop = "1px solid black"
 }
 function darkMode()
@@ -59,8 +62,11 @@ function darkMode()
         logo[i].style.color = 'white'
     }
 
-    card.style.color = "white"
-    card.style.backgroundColor = "black"
+    for(var i = 0; i < card.length; i ++)
+    {
+        card[i].style.color = "white"
+        card[i].style.backgroundColor = "black"
+    }
 
     ftop.style.borderTop = "1px solid white"
 }
