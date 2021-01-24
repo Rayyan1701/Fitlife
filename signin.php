@@ -146,7 +146,7 @@ if(isset($_POST['fname']))
     
     text-align: center;">
         <div  >Account created successfully</div><br><div style="margin-bottom: 50px;">
-        Now click here and go to our <a href="dashboard.html" >home page</a></div>
+        Now click here and go to our <a href="dashboard.php" >home page</a></div>
     </div>';
     $insert = true;
    }

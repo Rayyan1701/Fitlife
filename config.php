@@ -12,10 +12,10 @@ require_once 'vendor/autoload.php';
 $google_client = new Google_Client();
 
 //Set the OAuth 2.0 Client ID
-$google_client->setClientId('33578690743-5lomcvo2uq4bdlo56nce7ghc4qog61qk.apps.googleusercontent.com');
+$google_client->setClientId('475496436440-42ae4s2v2d2ticv1r8v5rvm2vip52uno.apps.googleusercontent.com');
 
 //Set the OAuth 2.0 Client Secret key
-$google_client->setClientSecret('kEruykgve_uF3_Zazd1sO6cx');
+$google_client->setClientSecret('xtrskYoddyHAbqHA5wT7Garo');
 
 //Set the OAuth 2.0 Redirect URI
 $google_client->setRedirectUri('http://localhost/web2/dashboard.php');
