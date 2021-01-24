@@ -3,12 +3,12 @@ const page = document.body
 const navbar = document.getElementsByTagName("nav")[0]
 
 const changeThemeDropdownLink = document.getElementsByClassName('themeChangeDropdown')[0]
-// const changeThemeDropdownLink2 = document.getElementsByClassName('themeChangeDropdown')[1]
 const lightModeLink = document.getElementsByClassName('lightMode')[0]
 const darkModeLink = document.getElementsByClassName('darkMode')[0]
 const footer = document.getElementsByTagName('footer')[0]
 const logo = document.getElementsByClassName('logo')
 const card = document.getElementById('infoHolder')
+const ftop = document.getElementById('fTop')
 
 const tables = document.getElementsByTagName('table')
 
@@ -35,11 +35,14 @@ function lightMode()
 
     card.style.color = "black"
     card.style.backgroundColor = "white"
+
+    ftop.style.borderTop = "1px solid black"
 }
 function darkMode()
 {
     page.style.backgroundColor = "#212529"
     page.style.color = "white"
+
     changeThemeDropdownLink.style.color = 'white'
 
     navbar.classList.remove("navbar-light")
@@ -58,4 +61,6 @@ function darkMode()
 
     card.style.color = "white"
     card.style.backgroundColor = "black"
+
+    ftop.style.borderTop = "1px solid white"
 }

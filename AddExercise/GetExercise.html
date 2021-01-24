@@ -73,6 +73,25 @@ $conn->close();
 
             </ul>
           </li>
+
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Members Data
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="AddExercise.php">Add Exercise</a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li>
+                <a class="dropdown-item" href="GetExercise.php">Get Exercise List</a>
+              </li>
+            </ul>
+            </li>
+
         </ul>
         <div class="nav-item dropdown">
           <a class="nav-link dropdown-toggle themeChangeDropdown" href="#" id="navbarDropdown" role="button"
@@ -87,39 +106,52 @@ $conn->close();
       </div>
     </div>
   </nav><br />
-  
+  <div style='min-height: 55vh;'>
      <?php
-    while($row = mysqli_fetch_array($result))
-    {
-    echo "
+   
+      if( mysqli_num_rows($result) == 0)
+      {
+        echo "
+          <div style='display: flex; flex-direction: column;'>
+            <h2 style='margin: auto;'>You have not logged any workouts yet!</h2><br/>
+            <h4 style='margin: auto;'><a href = 'AddExercise.php'>Add your Exercise</a> to get started.</h4>
+          </div>
+        ";
+      }
+      else
+      {
+        while($row = mysqli_fetch_array($result))
+        {
+        echo "
     <div class='container' style='display: flex;'>
       <div class='card' id='infoHolder' style='width: 18rem; margin: auto;'>
         <div class='card-body'>
           <h3 class='card-text'>".$row["date"]."</h3><hr/>
           <h4 class='card-title'>".$row["workout"]."</h4>
           <h6 class='card-subtitle mb-2 text-muted'>Calories burnt: ".$row["calories"]."</h6>
-          <h5 class='card-text'>".$row["time"]."</h5>
-          <h5 class='card-text'>".$row["duration"]."</h5>
+          <h5 class='card-text'>Time: ".substr($row["time"], 0, 5)."</h5>
+          <h5 class='card-text'>Duration: ".$row["duration"]." minutes</h5>
         </div>
       </div>
     </div><hr/>
     ";
+      }
     }
     ?> 
-    
-    
-    <footer style="height: 30vh; background-color: #f8f9fa; padding: 20px;">
-      <div style="display: flex;"><h6 style="margin: auto;" class="logo">Check out our other links here!</h6></div><br><br>
+    <br/>
+    </div>
+    <footer style="height: 30vh; background-color: #f8f9fa; padding: 20px; border-top: 1px solid black;" id="fTop">
+      <div style="display: flex;" class="logo"><h6 style="margin: auto;">Check out our other links here!</h6></div><br><br>
       <div class="container" style="display: grid; grid-template-columns: 1fr 1fr 1fr; width: 50%;">
-        <div style="margin: auto;" class="logo">
-          <i class="fab fa-2x fa-bootstrap"></i>
-        </div>
-        <div style="margin: auto;">
-          <i class="fab fa-2x fa-github" class="logo"></i>
-        </div>
-        <div style="margin: auto; ">
-          <i class="fab fa-2x fa-twitter" class="logo"></i>
-        </div>
+      <div style="margin: auto;" class="logo">
+        <i class="fab fa-2x fa-instagram" ></i>
+      </div>
+      <div style="margin: auto;" class="logo">
+        <i class="fab fa-2x fa-facebook"></i>
+      </div>
+      <div style="margin: auto; " class="logo">
+        <i class="fab fa-2x fa-twitter"></i>
+      </div>
         <div style="height: 6vh;"></div>
         <div style="height: 6vh;"></div>
         <div style="height: 6vh;"></div>
